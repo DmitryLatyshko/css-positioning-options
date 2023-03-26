@@ -1,0 +1,11 @@
+﻿<header>
+	<div class="app-header-wrapper">
+		<h1 class="app-header-title">
+			<a class="app-header-title-link" [routerLink]="'/' + home.path || ''">
+				<mat-icon *ngIf="!!home.icon" [svgIcon]="home.icon"></mat-icon>
+				{{ home.title || 'Angular' }}
+			</a>
+		</h1>
+		<app-navigation></app-navigation>
+	</div>
+</header>

@@ -1,0 +1,5 @@
+﻿<div class="code-container-wrapper">
+	<ng-container *ngFor="let template of elementTemplates">
+		<pre><code [innerText]="getTextCodeFromTemplate(template)"></code></pre>
+	</ng-container>
+</div>

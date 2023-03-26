@@ -1,0 +1,31 @@
+{
+	"name": "angular",
+	"version": "0.0.1",
+	"scripts": {
+		"ng": "ng",
+		"start": "ng serve --configuration development",
+		"build": "ng build --configuration development"
+	},
+	"private": true,
+	"dependencies": {
+		"@angular/animations": "~14.2.2",
+		"@angular/cdk": "~14.2.2",
+		"@angular/common": "~14.2.2",
+		"@angular/compiler": "~14.2.2",
+		"@angular/core": "~14.2.2",
+		"@angular/forms": "~14.2.2",
+		"@angular/material": "~14.2.2",
+		"@angular/platform-browser": "~14.2.2",
+		"@angular/platform-browser-dynamic": "~14.2.2",
+		"@angular/router": "~14.2.2",
+		"raw-loader": "~4.0.2",
+		"zone.js": "~0.11.8"
+	},
+	"devDependencies": {
+		"@angular-devkit/build-angular": "~14.2.3",
+		"@angular/cli": "~14.2.3",
+		"@angular/compiler-cli": "~14.2.2",
+		"@types/node": "~18.7.18",
+		"typescript": "~4.8.3"
+	}
+}

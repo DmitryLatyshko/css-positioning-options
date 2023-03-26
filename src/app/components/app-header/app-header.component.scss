@@ -1,0 +1,52 @@
+﻿:host {
+	background-color: #324157;
+	display: block;
+}
+
+header {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding: 1em 0;
+	position: relative;
+
+	&:after {
+		clear: both;
+		content: '';
+		display: block;
+	}
+
+	.app-header-wrapper {
+		margin: 0 auto;
+		max-width: 1000px;
+		width: 95%;
+
+		.app-header-title {
+			float: left;
+			font-size: 1rem;
+			font-weight: 700;
+			margin: 0;
+			text-transform: uppercase;
+
+			.app-header-title-link {
+				color: #ebebd3;
+				display: block;
+				text-decoration: none;
+				text-transform: uppercase;
+
+				&:hover {
+					background-color: #6a8ac2;
+					color: #464655;
+				}
+
+				mat-icon {
+					height: 1.2em;
+					width: 1.2em;
+					margin-right: 0.5em;
+					float: left;
+				}
+			}
+		}
+	}
+}

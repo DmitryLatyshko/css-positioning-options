@@ -1,0 +1,133 @@
+﻿.app-navigation-menu {
+	background-color: #324157;
+	clip-path: circle(0px at top right);
+	position: absolute;
+	right: 0;
+	top: 100%;
+	transition: clip-path ease-in-out 700ms;
+
+	&.app-navigation-menu-open {
+		clip-path: circle(250% at top right);
+	}
+
+	.app-navigation-menu-list {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+
+		.app-navigation-menu-list-item {
+			border-bottom: 1px solid #575766;
+
+			&:last-child {
+				border-bottom: none;
+			}
+
+			&.app-navigation-menu-list-item-active {
+				.app-navigation-menu-list-item-link {
+					background-color: #6a8ac2;
+				}
+			}
+
+			.app-navigation-menu-list-item-link {
+				color: #ebebd3;
+				display: block;
+				padding: 2em 4em 2em 1.5em;
+				text-decoration: none;
+				text-transform: uppercase;
+
+				&:hover {
+					background-color: #6a8ac2;
+					color: #464655;
+				}
+
+				mat-icon {
+					height: 1.2em;
+					width: 1.2em;
+					margin-right: 0.5em;
+					float: left;
+				}
+			}
+		}
+	}
+}
+
+.app-navigation-menu-toggle {
+	position: absolute;
+	top: 0.5em;
+	right: 0.5em;
+	padding: 1em;
+	cursor: pointer;
+
+	.app-navigation-menu-toggle-hamburger,
+	.app-navigation-menu-toggle-hamburger:before,
+	.app-navigation-menu-toggle-hamburger:after {
+		content: '';
+		display: block;
+		background-color: #ebebd3;
+		height: 3px;
+		width: 1.75em;
+		transition: all ease-in-out 500ms;
+	}
+
+	.app-navigation-menu-toggle-hamburger {
+		&:before {
+			transform: translateY(-6px);
+		}
+
+		&:after {
+			transform: translateY(3px);
+		}
+	}
+
+	.app-navigation-menu-toggle-open {
+		.app-navigation-menu-toggle-hamburger {
+			transform: rotate(45deg);
+
+			&:before {
+				opacity: 0;
+			}
+
+			&:after {
+				transform: translateY(-3px) rotate(-90deg);
+			}
+		}
+	}
+}
+
+@media(min-width: 700px) {
+	.app-navigation-menu {
+		background: transparent;
+		clip-path: initial;
+		float: right;
+		height: auto;
+		position: relative;
+
+		.app-navigation-menu-list {
+			.app-navigation-menu-list-item {
+				border: none;
+				display: inline-block;
+
+				&.app-navigation-menu-list-item-active {
+					.app-navigation-menu-list-item-link {
+						background: transparent;
+						text-decoration: underline #6a8ac2 3px;
+					}
+				}
+
+				.app-navigation-menu-list-item-link {
+					margin-left: 2em;
+					padding: 0;
+
+					&:hover {
+						background: transparent;
+						color: #6a8ac2;
+					}
+				}
+			}
+		}
+	}
+
+	.app-navigation-menu-toggle {
+		display: none;
+	}
+}

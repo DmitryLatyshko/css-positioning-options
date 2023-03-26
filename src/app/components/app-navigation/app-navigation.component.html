@@ -1,0 +1,28 @@
+﻿<ng-container *ngIf="isNavigationItemsExist">
+	<nav [ngClass]="{
+		'app-navigation-menu': true,
+		'app-navigation-menu-open': isOpen
+	}">
+		<ul class="app-navigation-menu-list">
+			<li *ngFor="let item of navigationItems"
+				class="app-navigation-menu-list-item"
+				[routerLinkActiveOptions]="{ exact: true }"
+				[routerLinkActive]="['app-navigation-menu-list-item-active']"
+			>
+				<a class="app-navigation-menu-list-item-link" [routerLink]="item.routerLink">
+					<mat-icon *ngIf="!!item.icon" [svgIcon]="item.icon"></mat-icon>
+					{{ item.caption }}
+				</a>
+			</li>
+		</ul>
+	</nav>
+	<div
+		[ngClass]="{
+			'app-navigation-menu-toggle': true,
+			'app-navigation-menu-toggle-open': isOpen
+		}"
+		(click)="toogle()"
+	>
+		<div class="app-navigation-menu-toggle-hamburger"></div>
+	</div>
+</ng-container>
