@@ -1,0 +1,19 @@
+﻿<div class="practice-position-fixed-wrapper">
+	<h1>Фіксоване позиціонування</h1>
+	<div class="practice-position-fixed-content">
+		<div class="practice-position-fixed-content-header">
+			<strong>Контейнер - шапка</strong>
+		</div>
+		<div class="practice-position-fixed-content-footer">
+			<strong>Контейнер - колонтитул</strong>
+		</div>
+	</div>
+	<hr>
+	<pre>Елементи випадає зі звичайного потоку документа, та для елемента в макеті сторінки не створюється простір.
+Він позиціонується відносно вихідного блоку вмісту, встановленого viewport, за винятком випадків, коли один з його предків має властивість <strong>transform</strong>, <strong>perspective</strong>, або <strong>filter</strong> встановлене на щось інше, крім <strong>none</strong>, та в такому випадку цей предок веде себе як блок вмісту.
+Його кінцева позиція визначається значеннями <strong>top</strong>, <strong>right</strong>, <strong>bottom</strong> та <strong>left</strong>.
+Це значення завжди створює новий контекст вмісту.
+В друкованих документах елемент розміщується в одному й тому ж положені на кожній сторінці.</pre>
+	<code-container [elementTemplates]="[htmlCode]"></code-container>
+	<code-container [elementTemplates]="[stylesCode]"></code-container>
+</div>

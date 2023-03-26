@@ -1,0 +1,32 @@
+﻿$box-border-color: #1b1b72;
+
+@mixin box-style($background-color) {
+	box-sizing: border-box;
+	border: 2px solid $box-border-color;
+	background-color: $background-color;
+}
+
+.practice-position-sticky-wrapper {
+	.practice-position-sticky-content {
+		@include box-style(#6a8ac2);
+		position: relative;
+		width: 500px;
+		height: 500px;
+
+		.practice-position-sticky-content-header {
+			@include box-style(#324157);
+
+			position: sticky;
+			top: 150px;
+		}
+
+		.practice-position-sticky-content-footer {
+			@include box-style(#438c5c);
+			color: #464655;
+
+			position: static;
+			height: 200px;
+			width: 200px;
+		}
+	}
+}

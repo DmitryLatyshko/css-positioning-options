@@ -1,6 +1,11 @@
 ﻿import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
-import { PositionAbsoluteComponent, PositionComponent } from '../libs';
+import {
+	PositionAbsoluteComponent,
+	PositionComponent, PositionFixedComponent,
+	PositionRelativeComponent,
+	PositionStaticComponent, PositionStickyComponent,
+} from '../libs';
 import { AppHomeComponent } from './components';
 import { PageRoute, PageRoutes } from './models';
 import { MatIconsRegistratorService, PageRouteRegistratorService } from './services';
@@ -26,13 +31,49 @@ const routes: PageRoutes = [
 		title: 'Position',
 	},
 	{
-		type: 'practice.position-absolute',
+		type: 'practice.position-static',
 		order: 1,
+		icon: '',
+		path: 'practice/position/static',
+		component: PositionStaticComponent,
+		pathMatch: 'full',
+		title: 'Position - Static',
+	},
+	{
+		type: 'practice.position-absolute',
+		order: 2,
 		icon: '',
 		path: 'practice/position/absolute',
 		component: PositionAbsoluteComponent,
 		pathMatch: 'full',
 		title: 'Position - Absolute',
+	},
+	{
+		type: 'practice.position-relative',
+		order: 3,
+		icon: '',
+		path: 'practice/position/relative',
+		component: PositionRelativeComponent,
+		pathMatch: 'full',
+		title: 'Position - Relative',
+	},
+	{
+		type: 'practice.position-fixed',
+		order: 4,
+		icon: '',
+		path: 'practice/position/fixed',
+		component: PositionFixedComponent,
+		pathMatch: 'full',
+		title: 'Position - Fixed',
+	},
+	{
+		type: 'practice.position-sticky',
+		order: 5,
+		icon: '',
+		path: 'practice/position/sticky',
+		component: PositionStickyComponent,
+		pathMatch: 'full',
+		title: 'Position - Sticky',
 	},
 ];
 
