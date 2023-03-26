@@ -1,0 +1,17 @@
+﻿<div class="practice-position-absolute-wrapper">
+	<h1>Абсолютне позиціонування</h1>
+	<div class="practice-position-absolute-content">
+		<div class="practice-position-absolute-content-header">
+			<strong>Контейнер з абсолютний позиціонуванням</strong>
+		</div>
+		<div class="practice-position-absolute-content-footer">
+			<strong>Контейнер зі статичним позиціонуванням</strong>
+		</div>
+	</div>
+	<hr>
+	<pre>Елемент у котрого абсолютне позиціонування видаляється зі звичайного документообігу, і для нього не створюється місця в макеті сторінки.
+Він розташовується відносно батьківсього елемента (у котрого <strong>position !== 'static'</strong>).</pre>
+	<code-container [elementTemplates]="[stylesCode]"></code-container>
+	<pre>Кінцеве положення такого елемента визначається значеннями <strong>top</strong>, <strong>right</strong>, <strong>bottom</strong>, <strong>left</strong>.
+Необов'язково задавати значення для всіх чотирьох сторін, зазвичай достатньо для <strong>top</strong> та <strong>left</strong> або <strong>right</strong>.</pre>
+</div>

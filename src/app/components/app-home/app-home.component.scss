@@ -1,0 +1,14 @@
+.app-home-wrapper {
+	display: flex;
+	flex-direction: column;
+	align-items: start;
+	justify-content: flex-start;
+
+	.app-home-header {
+		margin: 0 auto;
+
+		h1 {
+			padding: 0 1em;
+		}
+	}
+}

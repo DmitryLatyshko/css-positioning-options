@@ -1,5 +1,6 @@
 ﻿import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
+import { PositionAbsoluteComponent, PositionComponent } from '../libs';
 import { AppHomeComponent } from './components';
 import { PageRoute, PageRoutes } from './models';
 import { MatIconsRegistratorService, PageRouteRegistratorService } from './services';
@@ -14,7 +15,26 @@ export const HOME_ROUTE: PageRoute = {
 	title: 'Angular',
 };
 
-const routes: PageRoutes = [];
+const routes: PageRoutes = [
+	{
+		type: 'practice.position',
+		order: 0,
+		icon: '',
+		path: 'practice/position',
+		component: PositionComponent,
+		pathMatch: 'full',
+		title: 'Position',
+	},
+	{
+		type: 'practice.position-absolute',
+		order: 1,
+		icon: '',
+		path: 'practice/position/absolute',
+		component: PositionAbsoluteComponent,
+		pathMatch: 'full',
+		title: 'Position - Absolute',
+	},
+];
 
 @NgModule({
 	imports: [
